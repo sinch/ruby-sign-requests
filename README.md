@@ -2,6 +2,8 @@
 
 Why sign your requests instead of using basic authentication? It's much more secure, and Sinch doesn't support basic authentication for production applications.
 
+**Note:** This has the same functionality as our Ruby gem for sending SMS [www.sinch.com/tutorials/send-sms-ruby](https://www.sinch.com/tutorials/send-sms-ruby/)
+
 To get started, I'll show you how to sign a request to send an SMS. Create an empty ruby file - I'll call mine **sms.rb** - and add the following:
 
 	require "base64"
