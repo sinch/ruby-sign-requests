@@ -53,6 +53,6 @@ If successful, you will see the message id printed, and you will receive the tex
 
 ##Debugging Tips
 
-- Use the example at [https://www.sinch.com/docs/rest-apis/api-documentation/#applicationsignedrequest](https://www.sinch.com/docs/rest-apis/api-documentation/#applicationsignedrequest) with the sample app key and secret to make sure that your signature matches the example at different points along the way
+- Use the example [in the documentation](https://www.sinch.com/docs/sms/#sendsms) with the sample app key and secret to make sure that your signature matches the example at different points along the way
 - Capitalization matters! The headers that you send with the request need to be **exactly** the same as the ones in your canonicalized_headers. Same goes for content-type.
 
