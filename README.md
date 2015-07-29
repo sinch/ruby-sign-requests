@@ -1,10 +1,10 @@
 #Signing Sinch API Requests in Ruby
 
-Why sign your requests instead of using basic authentication? It's much more secure, and Sinch doesn't support basic authentication for production applications.
+Why sign your requests instead of using basic authentication? It's much more secure and Sinch doesn't support basic authentication for production applications.
 
-**Note:** This has the same functionality as our Ruby gem for sending SMS [www.sinch.com/tutorials/send-sms-ruby](https://www.sinch.com/tutorials/send-sms-ruby/)
+**Note:** This has the same functionality as our [Ruby gem for sending SMS] (https://www.sinch.com/tutorials/send-sms-ruby/).
 
-To get started, I'll show you how to sign a request to send an SMS. Create an empty ruby file - I'll call mine **sms.rb** - and add the following:
+To get started, I'll show you how to sign a request to send an SMS. Create an empty ruby file—I'll call mine **sms.rb**—and add the following:
 
 	require "base64"
 	require "openssl"
@@ -41,7 +41,7 @@ To get started, I'll show you how to sign a request to send an SMS. Create an em
 	request.body = body
 	puts JSON.parse(http.request(request).body)
 
-Then, fill in the first four variables with a phone number that can receive sms (with country code!), the text of the message you want to send, and your app key and secret from the Sinch dashboard.
+Then, fill in the first four variables with a phone number that can receive SMS (with country code), the text of the message you want to send, and your app key and secret from the Sinch dashboard.
 
 If you don't yet have a Sinch account, head over to [www.sinch.com/signup](https://www.sinch.com/signup) to create an account. Then click 'create new app' to make your first app. This will generate a key and secret for you to use.
 
@@ -49,10 +49,9 @@ To run sms.rb, type the following onto your command line:
 
 	ruby sms.rb
 
-If successful, you will see the message id printed, and you will receive the text in a few seconds.
+If successful, you will see the message ID printed and you will receive the text in a few seconds.
 
-##Debugging Tips
+##Debugging tips
 
-- Use the example [in the documentation](https://www.sinch.com/docs/sms/#sendsms) with the sample app key and secret to make sure that your signature matches the example at different points along the way
-- Capitalization matters! The headers that you send with the request need to be **exactly** the same as the ones in your canonicalized_headers. Same goes for content-type.
-
+- Use the example [in the documentation](https://www.sinch.com/docs/sms/#sendsms) with the sample app key and secret to make sure that your signature matches the example at different points along the way.
+- Capitalization matters! The headers that you send with the request need to be exactly the same as the ones in your canonicalized_headers. Same goes for content-type.
