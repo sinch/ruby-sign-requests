@@ -1,3 +1,5 @@
+Writer’s note: *For the latest updates on mobile app security, make sure to check out our [Verification SDK] (https://www.sinch.com/products/verification/sms-verification/).*
+
 #Signing Sinch API Requests in Ruby
 
 Why sign your requests instead of using basic authentication? It's much more secure and Sinch doesn't support basic authentication for production applications.
